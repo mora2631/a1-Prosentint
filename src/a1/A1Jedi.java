@@ -43,6 +43,7 @@ public class A1Jedi {
 		double [] totalPriceNum = new double[numCus];
 		
 		for (int i = 0; i < numCus; i++) {
+			
 			double total = 0.0;
 			
 			//System.out.println("What is the first name of the customer?");
@@ -57,6 +58,8 @@ public class A1Jedi {
 			
 			int numBought = scan.nextInt();
 			
+			String [] customersItems = new String[numBought];
+			
 			for (int j = 0; j < numBought; j++) {
 				//System.out.println();
 				//System.out.println();
@@ -69,19 +72,22 @@ public class A1Jedi {
 				
 				
 				
+				
 				int itemNum = 0;
-				for (int k = 0; k < numItems; k++) {
-					if (items[k].equals(item)) {
-						itemNum = k;
-					}
-				}
+				
 				total += prices[itemNum]*amt;
 				
-				if (customerPurchases[itemNum] != numCus) {
-					customerPurchases[itemNum] += 1;
-				}
 
 				itemPurchases[itemNum] += amt;
+				
+				for (int k = 0; k < numBought; k++) {
+					if (customersItems[k].equals(item)) {
+						break;
+					}else {
+						customerPurchases[itemNum] += 1;
+						customersItems[j] = item;
+					}
+				}
 			}
 			totalPriceNum[i] = total;
 			String strTotal = String.format("%.2f", total);

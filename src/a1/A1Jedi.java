@@ -75,8 +75,12 @@ public class A1Jedi {
 						itemNum = k;
 					}
 				}
-				total += prices[itemNum]*amt;	
-				customerPurchases[itemNum] += 1;
+				total += prices[itemNum]*amt;
+				
+				if (customerPurchases[itemNum] != numCus) {
+					customerPurchases[itemNum] += 1;
+				}
+
 				itemPurchases[itemNum] += amt;
 			}
 			totalPriceNum[i] = total;

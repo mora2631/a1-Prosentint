@@ -69,10 +69,7 @@ public class A1Jedi {
 				
 				//System.out.println("What item did they buy?");
 				String item = scan.next();
-				
-				
-				
-				
+							
 				int itemNum = 0;
 				for (int k = 0; k < numItems; k++) {
 					if (items[k].equals(item)) {
@@ -82,17 +79,11 @@ public class A1Jedi {
 				
 				total += prices[itemNum]*amt;
 				
+				customerPurchases[itemNum] += 1;
 
 				itemPurchases[itemNum] += amt;
 				
-				for (int k = 0; k < numBought; k++) {
-					if (customersItems[k].equals(item)) {
-						break;
-					}else {
-						customerPurchases[itemNum] += 1;
-						customersItems[j] = item;
-					}
-				}
+				
 			}
 			totalPriceNum[i] = total;
 			String strTotal = String.format("%.2f", total);

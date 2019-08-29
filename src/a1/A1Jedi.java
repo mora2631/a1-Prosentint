@@ -58,7 +58,7 @@ public class A1Jedi {
 			
 			int numBought = scan.nextInt();
 			
-			String [] customersItems = new String[numBought];
+			String [] customersItems = new String[numItems];
 			
 			for (int j = 0; j < numBought; j++) {
 				//System.out.println();
@@ -79,7 +79,10 @@ public class A1Jedi {
 				
 				total += prices[itemNum]*amt;
 				
-				customerPurchases[itemNum] += 1;
+				if (customersItems[itemNum].contentEquals(item)) {
+					customerPurchases[itemNum] += 1;
+					customersItems[itemNum] = item;
+				}
 
 				itemPurchases[itemNum] += amt;
 				

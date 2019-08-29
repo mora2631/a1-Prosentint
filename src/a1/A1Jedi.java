@@ -74,6 +74,11 @@ public class A1Jedi {
 				
 				
 				int itemNum = 0;
+				for (int k = 0; k < numItems; k++) {
+					if (items[k].equals(item)) {
+						itemNum = k;
+					}
+				}
 				
 				total += prices[itemNum]*amt;
 				

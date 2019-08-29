@@ -10,27 +10,27 @@ public class A1Adept {
 
 		// Your code follows here.
 		
-		System.out.println("How many items are in the store?");
+		//System.out.println("How many items are in the store?");
 		int numItems = scan.nextInt();
 		
 		double [] prices = new double[numItems];
 		String [] items = new String[numItems];
 		
 		for (int i = 0; i < numItems; i++) {
-			System.out.println();
-			System.out.println();
-			System.out.println("What is item number "+ (i+1));
+			//System.out.println();
+			//System.out.println();
+			//System.out.println("What is item number "+ (i+1));
 			items[i] = scan.next();
 			
-			System.out.println("How much does that item cost?");
+			//System.out.println("How much does that item cost?");
 			prices[i] = scan.nextDouble();
 			
 		}
 		
-		System.out.println("How many customers are in the store?");
+		//System.out.println("How many customers are in the store?");
 		
 		int numCus = scan.nextInt();
-		System.out.println();
+		//System.out.println();
 		
 		String [] customers = new String[numCus];
 		String [] totalPrice = new String[numCus];
@@ -39,26 +39,26 @@ public class A1Adept {
 		for (int i = 0; i < numCus; i++) {
 			double total = 0.0;
 			
-			System.out.println("What is the first name of the customer?");
+			//System.out.println("What is the first name of the customer?");
 			String fName = scan.next();
 			
-			System.out.println("What is the last name of the customer?");
+			//System.out.println("What is the last name of the customer?");
 			String lName = scan.next();
 			
 			customers[i] = fName + " " + lName;
 			
-			System.out.println("How many items did they buy?");
+			//System.out.println("How many items did they buy?");
 			
 			int numBought = scan.nextInt();
 			
 			for (int j = 0; j < numBought; j++) {
-				System.out.println();
-				System.out.println();
+				//System.out.println();
+				//System.out.println();
 				
-				System.out.println("How many of that item did they buy?");
+				//System.out.println("How many of that item did they buy?");
 				int amt = scan.nextInt();
 				
-				System.out.println("What item did they buy?");
+				//System.out.println("What item did they buy?");
 				String item = scan.next();
 				
 				
